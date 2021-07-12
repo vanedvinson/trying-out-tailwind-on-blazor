@@ -1,0 +1,131 @@
+﻿@page "/"
+
+<h1>Okay, let's go!</h1>
+
+<input @bind="name" @onfocusout="nekametoda" style="border:1px solid grey" />
+
+
+
+<div>
+    <div class="m-4 p-4 rounded-t-lg border-2 border-dashed">
+        <div class="grid grid-cols-4 gap-4">
+            @foreach (var item in minerList)
+            {
+                <div class="shadow">
+                    <div class=" text-center bg-blue-100 rounded-t-lg">
+                        <div class="grid grid-cols-2 text-center">
+                            <div class="py-2">
+                                <h1>Kartice</h1>
+                            </div>
+                            <div class="py-2">
+                                <h1>Temp</h1>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="py-2">
+                                <h1>Hashrate</h1>
+                                <p>25 MH/s</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <div class="py-2">
+                                <h1>Vent speed %</h1>
+                            </div>
+                            <div class="py-2">
+                                <h1>Power %</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex bg-indigo-900 px-2 py-1 text-white items-center rounded-b-lg">
+                        <h1 class="flex-1">@item</h1>
+                        <button class="flex-initial bg-green-500 px-2 py-1 rounded-lg">lasagna</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="m-4 p-4 rounded-t-lg border-2 border-dashed">
+        <div class="grid grid-cols-4 gap-4">
+            @foreach (var item in minerList)
+            {
+                <div class="shadow">
+                    <div class=" text-center bg-blue-100 rounded-t-lg">
+                        <div class="grid grid-cols-2 text-center">
+                            <div class="py-2">
+                                <h1>Kartice</h1>
+                            </div>
+                            <div class="py-2">
+                                <h1>Temp</h1>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="py-2">
+                                <h1>Hashrate</h1>
+                                <p>25 MH/s</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <div class="py-2">
+                                <h1>Vent speed %</h1>
+                            </div>
+                            <div class="py-2">
+                                <h1>Power %</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex bg-indigo-900 px-2 py-1 text-white items-center rounded-b-lg">
+                        <h1 class="flex-1">@item</h1>
+                        <button class="flex-initial bg-green-500 px-2 py-1 rounded-lg">lasagna</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="m-4 p-4 rounded-t-lg border-2 border-dashed">
+        <div class="grid grid-cols-4 gap-4">
+            @foreach (var item in minerList)
+            {
+                <div class="shadow">
+                    <div class=" text-center bg-blue-100 rounded-t-lg">
+                        <div class="grid grid-cols-2 text-center">
+                            <div class="py-2">
+                                <h1>Kartice</h1>
+                            </div>
+                            <div class="py-2">
+                                <h1>Temp</h1>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="py-2">
+                                <h1>Hashrate</h1>
+                                <p>25 MH/s</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <div class="py-2">
+                                <h1>Vent speed %</h1>
+                            </div>
+                            <div class="py-2">
+                                <h1>Power %</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex bg-indigo-900 px-2 py-1 text-white items-center rounded-b-lg">
+                        <h1 class="flex-1">@item</h1>
+                        <button class="flex-initial bg-green-500 px-2 py-1 rounded-lg">lasagna</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    string name;
+    List<string> minerList = new List<string>();
+
+    void nekametoda()
+    {
+        minerList.Add(name);
+    }
+}
