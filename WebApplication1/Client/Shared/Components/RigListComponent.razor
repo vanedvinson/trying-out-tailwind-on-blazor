@@ -1,0 +1,22 @@
+﻿@using WebApplication1.Client.Shared.Components
+
+<input @bind="name" @onfocusout="nekametoda" style="border:1px solid grey" />
+
+<div class="m-4 p-4 rounded-t-lg border-2 border-dashed">
+    <div class="grid grid-cols-4 gap-4">
+        @foreach (var item in minerList)
+        {
+            <RigComponent/>
+        }
+    </div>
+</div>
+
+@code {
+    string name;
+    List<string> minerList = new List<string>();
+
+    void nekametoda()
+    {
+        minerList.Add(name);
+    }
+}
