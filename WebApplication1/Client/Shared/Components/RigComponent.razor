@@ -24,10 +24,11 @@
         </div>
     </div>
     <div class="flex bg-indigo-900 px-2 py-1 text-white items-center rounded-b-lg">
-        <h1 class="flex-1">Name of Rig</h1>
+        <h1 class="flex-1">@name</h1>
         <button class="flex-initial bg-green-500 px-2 py-1 rounded-lg">lasagna</button>
     </div>
 </div>
 
 @code {
+    [Parameter] public string name { get; set; }
 }
